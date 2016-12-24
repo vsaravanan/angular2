@@ -1,0 +1,11 @@
+ .screen50  {
+	
+	max-width: 500px;
+	padding-left: 5%;
+}
+
+.text-right {
+	text-align: right;
+}
+
+/* width: 40%; .smalltextbox, .smalldiv, */
