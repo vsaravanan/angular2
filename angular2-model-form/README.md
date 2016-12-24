@@ -1,3 +1,32 @@
+Courtesy from
+
+[https://school.scotch.io/angular-2-forms-and-validation/reactive-form-foundation](https://school.scotch.io/angular-2-forms-and-validation/reactive-form-foundation)
+
+Source code for angular2-model-form:
+
+[https://github.com/vsaravanan/angular2/tree/master/angular2-model-form](https://github.com/vsaravanan/angular2/tree/master/angular2-model-form)
+ 
+##Angular2 
+#Model driven form with validation using FormArray
+
+##Template Driven form :
+
+ 
+Angular roams the template and builds the data model
+
+##Model Driven form :
+
+We build the data model in the class
+
+    *   Dynamically Add or Remove address component.
+    *   Perhaps with validations. Interesting….
+ 	
+	Form Building
+
+	 	FormGroup()
+		FormControl() 
+		FormArray() 
+
 # Angular2ModelForm
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.24.

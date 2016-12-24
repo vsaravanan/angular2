@@ -39,6 +39,8 @@ testem.log
 /e2e/*.js
 /e2e/*.map
 
+deploytips.txt
+
 #System Files
 .DS_Store
 Thumbs.db

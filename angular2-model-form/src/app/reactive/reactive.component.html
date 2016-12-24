@@ -8,7 +8,7 @@
 	<div class="screen50">
 
 		<div class="form-group">
-			<label for="name"></label>
+			<label for="name">Name</label>
 			<input type="text" class="form-control smalltextbox" name="name" required
 				formControlName="name" >
 
@@ -18,7 +18,7 @@
 		</div>
 
 		<div class="form-group">
-			<label for="userName"></label>
+			<label for="userName">User name</label>
 			<input type="text" class="form-control smalltextbox" name="userName" required
 				formControlName="username">	   
 
@@ -44,7 +44,7 @@
 					</div>
 					<div class="panel-body" [formGroupName]="i" >
 						<div class="form-group">
-							<label for="city"></label>
+							<label for="city">City</label>
 							<input type="text" class="form-control" formControlName="city" required>
 
 							<span clas="help-block" *ngIf="formErrors.addresses[i].city">
@@ -56,7 +56,7 @@
 								city is required -->
 						</div>
 						<div class="form-group">
-							<label for="country"></label>
+							<label for="country">Country</label>
 							<input type="text" class="form-control" formControlName="country" required>
 
 							<span clas="help-block" *ngIf="formErrors.addresses[i].country">

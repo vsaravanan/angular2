@@ -3,14 +3,12 @@ import { FormGroup, FormControl, Validators, FormBuilder, FormArray } from '@ang
 
 @Component({
   selector: 'reactive-form',
-  styleUrls: ['./reactive.component.css'],  
-  templateUrl: './reactive.component.html',    
+  styleUrls: ['./reactive.component.css'],
+  templateUrl: './reactive.component.html',
 })
 
 export class ReactiveFormComponent implements OnInit {
 	form: FormGroup;
-	// nameError: string;
-	// usernameError: string;
 
   formErrors = {
       name: '',
@@ -18,7 +16,6 @@ export class ReactiveFormComponent implements OnInit {
       addresses: [
         {city: '', country: '' }
       ]
-      
   };
 
   validationMessages = {
@@ -39,12 +36,9 @@ export class ReactiveFormComponent implements OnInit {
       country: {
         required: 'country is required.',
         minlength: 'country must be 3 chrs'
-      },      
+      },
     },
-
-  }
-
-
+  };
 
   constructor(private fb: FormBuilder) { }
 
@@ -52,15 +46,16 @@ export class ReactiveFormComponent implements OnInit {
     this.buildForm();
   }
 
+//    template driven method
 //  	this.form = new FormGroup ({
 //  		name: new FormControl(''),
 //  		username: new FormControl('')
-//		});
+// 		});
 
   buildForm() {
 
   	this.form = this.fb.group ({
-  		name: ['', [Validators.minLength(3), Validators.maxLength(6)]], 
+      name: ['', [Validators.minLength(3), Validators.maxLength(6)]], 
   		username: ['', Validators.minLength(3)],
       addresses: this.fb.array([
         this.createAddress()
@@ -90,6 +85,7 @@ export class ReactiveFormComponent implements OnInit {
 
      this.validateAddresses();
 
+      //    template driven method
       // this.nameError = '';
       // this.usernameError = '';
 
@@ -139,13 +135,14 @@ export class ReactiveFormComponent implements OnInit {
        let address = <FormGroup> addresses.at(n - 1);
 
        // validate that specific group. loop through the groups controls
-       for (let field in address.controls)
-       {
+       for (let field in address.controls) {
+
           // get the formcontrol
           let input = address.get(field);
 
           // do the validation and save errors to formerrors if necessary
           if (input.invalid && input.dirty) {
+
             for (let error in input.errors) {
               this.formErrors.addresses[n-1][field] = this.validationMessages.addresses[field][error];
             }
