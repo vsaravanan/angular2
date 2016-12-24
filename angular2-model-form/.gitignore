@@ -2,6 +2,7 @@
 
 # compiled output
 /dist
+/angular2prod
 /tmp
 /e2e
 /assets
