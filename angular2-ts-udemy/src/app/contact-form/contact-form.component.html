@@ -1,0 +1,8 @@
+<form>
+  <div class="form-group">
+    <label for="firstName">First Name</label>
+    <input ngModel="your first name" #firstName="ngModel" (change) = "log(firstName)" 
+    id="firstName" name="firstName" type="text" class="form-control"  >
+  </div>
+  <button class="btn btn-primary" type="submit">Submit</button>
+</form>

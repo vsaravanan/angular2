@@ -1,0 +1,6 @@
+<ul>
+    <li>Title: {{ task.title }}</li>
+    <li *ngIf="task.assignee != null" >1 Assigned to : {{ task.assignee.name}}</li>
+    <li>2 Assigned to : {{ task.assignee != null ? task.assignee.name : ""}}</li>
+    <li>3 Assigned to : {{ task.assignee?.role?.name}}</li>    
+</ul>

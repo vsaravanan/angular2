@@ -1,0 +1,140 @@
+<p><br></p>
+
+    <table >
+
+        <tr>
+            <td style="width:10%"> &nbsp; </td>
+
+            <td>
+            Courtesy from <br>
+            <a href="https://www.udemy.com/angular-2-tutorial-for-beginners/">https://www.udemy.com/angular-2-tutorial-for-beginners/</a>
+            <br><br>
+
+            <p>Source code for angular2-template-form:<br>
+            <a href="https://github.com/vsaravanan/angular2/tree/master/angular2-ts-udemy">
+                                    https://github.com/vsaravanan/angular2/tree/master/angular2-ts-udemy</a>
+
+<p></p>
+
+              <h2 ><i class="colorBlue"> 1. favorite and like example </i></h2>
+              <app-likeit  [is-favorite]="post.isFavorite" 
+              (change)="onFavoriteChange($event)" > 
+              </app-likeit>
+
+<p></p>
+<h2><i class="colorBlue">2. zippy example</i></h2>
+        <app-zippy title="Who can see my stuff?">
+            Content of who can see my stuff
+        </app-zippy>
+        <app-zippy title="Who can contact me?">
+            Content of who can contact me
+        </app-zippy>
+<p></p>
+
+<h2><i class="colorBlue">3.Add to the list </i></h2>
+<app-hero-view> </app-hero-view> <br>
+
+<h2><i class="colorBlue">4.bootstrap-panel</i></h2> 
+
+  <app-bootstrap-panel>
+    <div class="heading">The Heading </div>
+    <div class="body"> This is body </div>
+    <div class="body"> This is another body </div>
+  </app-bootstrap-panel>
+
+<h2><i class="colorBlue">5.Properties and events </i></h2> 
+<pre>
+  
+<![CDATA[
+
+  one way from data source to view target
+  in simple words component to template
+
+  Interpolation, Property, Attribute, Class, Style
+  {{expression}} or [target] = "expression"
+
+  Event
+  
+  one way from view target to data source
+  in simple words template to component
+  
+  event binding (target) = "statement"
+
+  Two-way or banana in a box
+    [(target)] = "expression"
+
+  class property: 
+    <div [class.special]="isSpecial">Special</div>
+
+  style property :
+    <button [style.color] = "isSpecial ? 'red' : 'green'"></button>
+
+  // example on class property and style property
+  <button class="btn btn-primary" [class.active]="isActive" 
+  [style.backgroundColor]="isActive ? 'blue' : 'gray' "  >Submit</button>
+
+]]>
+
+</pre>
+
+
+  <button class="btn btn-primary" [class.active]="isActive" 
+  [style.backgroundColor]="isActive ? 'blue' : 'gray' "  >just colorBlue</button>
+
+
+<pre>
+
+<![CDATA[
+
+  // property binding, event binding separately
+  <input type="text" name="hehe" [value]="title" (input)="title = $event.target.value"   />
+
+  // both property binding, event binding together
+  <input type="text" [(ngModel)]="title" />
+
+  // event binding only
+  <input type="button" name="haha"  value="Clear" (click)="title = ''" />
+  Preview: {{title}}
+
+]]>
+
+</pre>
+
+  <input type="text" name="hehe" [value]="title" (input)="title = $event.target.value"   />
+  <br>
+  <input type="text" [(ngModel)]="title" />
+  <br>
+  <input type="button" name="haha"  value="Clear" (click)="title = ''" />
+  <br>
+  Preview: {{title}}
+<p></p>
+
+<h2><i class="colorBlue">6.services </i></h2> 
+
+<courses> </courses>
+
+<h2><i class="colorBlue">7.autoGrow attribute directive @HostListener</i></h2> 
+@HostListener is required when you need to define service in general <br>
+<input id="one" type="text" autoGrow />     
+<p></p>
+
+<h2><i class="colorBlue">8. Tab panel example, and pipes example </i></h2> 
+<app-ngswitch> </app-ngswitch>
+
+<p></p>
+
+<h2><i class="colorBlue">9.other way of writing Properties and events with ngModel </i></h2> 
+<pre>
+<![CDATA[
+    <input ngModel="firstName" #firstName="ngModel" (change) = "log(firstName)" 
+    id="firstName" name="firstName" type="text" class="form-control"  >
+]]>
+</pre>
+This example is without validations<br>
+    <app-contact-form></app-contact-form>
+
+            </td>
+        </tr>        
+    </table>
+
+

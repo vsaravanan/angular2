@@ -1,0 +1,34 @@
+<p>
+  favorite works!
+  <i class="glyphicon"
+      [ngClass]="{
+       'glyphicon-star': isFavorite,
+       'glyphicon-star-empty': !isFavorite
+     }"        
+     (click)="onFavorite()"
+   ></i>  
+</p>
+
+<p>
+  likeit works!
+  <i 
+    id="myheart"
+    class="glyphicon glyphicon-heart"
+    [class.highlighted]="isLiked"
+    (click) = "onClick($event)"
+    
+  ></i>
+  <span> {{counter}} </span>
+
+</p>
+  <div style="width: 20px">
+    <i id="menuup" class="glyphicon glyphicon-menu-up vote-button" 
+      [class.highlightedmenu]= "voterTouched > 0"
+    (click) = "onClick($event)"></i>
+
+    {{voter}}
+
+    <i id="menudown" class="glyphicon glyphicon-menu-down vote-button"
+          [class.highlightedmenu]= "voterTouched < 0"
+     (click) = "onClick($event)"></i>
+  </div>
